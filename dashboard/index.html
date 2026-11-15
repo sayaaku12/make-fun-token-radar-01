@@ -1,14 +1,22 @@
 <!doctype html>
+<!-- Token Radar: the static dashboard. data.js (written by main.ts beside this page) carries the
+     whole board; app.js renders it. No network: no fetch, no remote font, no remote anything. -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1">
 <title>Token Radar: pre-token protocols ranked by implied value</title>
 <link rel="stylesheet" href="app.css">
 </head>
 <body>
 <a class="skip" href="#board">Skip to the board</a>
-<main id="board" tabindex="-1" aria-busy="true"></main>
+<!-- The board mounts here; app.js fills it, and aria-busy clears once the first paint lands. -->
+<main
+  id="board"
+  tabindex="-1"
+  aria-busy="true"></main>
 <script src="../data.js"></script>
 <script src="app.js"></script>
 <noscript><p class="noscript">Token Radar needs JavaScript: the board, the detail view and the filters all run in this page, with no network.</p></noscript>
